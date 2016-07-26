@@ -15,34 +15,6 @@ open Suave.RequestErrors
 open FSharp.Data.TypeProviders
 open FSharp.Linq
 
-let interestedTrainees = 
-    ["Emilien Pecoul", "https://twitter.com/Ouarzy";
-     "Florent Pellet", "https://twitter.com/florentpellet";
-     "Clément Bouillier", "https://twitter.com/clem_bouillier";
-     "Jean Helou", "https://twitter.com/jeanhelou"
-     "Yannick Ringapin", "https://twitter.com/BlackBeard486";
-     "Kevin Lejeune", "https://twitter.com/kevin_le_jeune";
-     "Karol Chmist", "https://twitter.com/karolchmist";
-     "Gregory Cica", "";
-     "François Miton", "";
-     "Bertrand Saintes", "";
-     "Samuel Pecoul", "https://twitter.com/SamPecoul";
-     "Nadège Rouelle", "https://twitter.com/nadegerouelle";
-     "Romain Berthon", "https://twitter.com/RomainTrm";
-     "Benjamin Garel", "https://twitter.com/bgarel";
-     "Romain Dequidt", "https://twitter.com/romain_dequidt";
-     "Lucas Courot", "https://twitter.com/lucas_courot";
-     "Jean Detoeuf", "https://twitter.com/thebignet";
-     "Agnès Crepet", "https://twitter.com/agnes_crepet";
-     "Mathieu Petitdant", "https://twitter.com/mpetitdant"
-     ]
-
-let getInterestedTrainees =
-    interestedTrainees
-    |> List.map (fun trainee -> sprintf "{ \"name\": \"%s\", \"twitterUrl\": \"%s\" }" (fst trainee) (snd trainee))
-    |> String.concat ","
-    |> sprintf "{ \"interestedTrainees\": [ %s ] }" 
-
 let app : WebPart =
     choose 
         [ 
@@ -50,7 +22,5 @@ let app : WebPart =
                 [ Filters.path "/" >=> Files.browseFileHome "index.html"
                   pathScan "/%s" (fun path -> Files.browseFileHome (sprintf "%s/index.html" path))
                   Files.browseHome ] 
-            GET >=> choose
-                [ path "/interestedTrainees" >=> request (fun req -> OK getInterestedTrainees)]   
             RequestErrors.NOT_FOUND "Page not found." 
         ]
