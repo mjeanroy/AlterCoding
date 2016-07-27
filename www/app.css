@@ -64,6 +64,10 @@ body {
     width: 400px;    
 }
 
+.bold{
+    font-weight: bold;
+}
+
 @media screen and (max-width: 570px) {
     .ac-home-content {
         margin-right: 10px;
