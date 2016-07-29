@@ -42,7 +42,7 @@ let askStop = waitUserStopRequest >> stop
 let buildDocker () = 
     directExec (fun info ->
         info.FileName <- "docker"
-        info.Arguments <- "build -t AlterCoding .")
+        info.Arguments <- "build -t altercoding .")
 
 Target "build" (buildDebug >> ignore)
 
