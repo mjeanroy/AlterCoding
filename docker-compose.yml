@@ -2,6 +2,8 @@ mono:
   image: altercoding
   environment:
    - VIRTUAL_HOST=www.altercoding.com
+  ports:
+  - "80:80"
   expose:
    - "80"
   dns:
