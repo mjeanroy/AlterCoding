@@ -1,5 +1,4 @@
 mono:
-  build: .
   image: altercoding
   environment:
    - VIRTUAL_HOST=www.altercoding.com
