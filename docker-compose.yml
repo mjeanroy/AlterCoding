@@ -1,0 +1,10 @@
+mono:
+  image: hackyourtraining
+  environment:
+   - VIRTUAL_HOST=www.hackyourtraining.com
+  expose:
+   - "80"
+  dns:
+   - 8.8.8.8
+   - 9.9.9.9
+  restart: always
