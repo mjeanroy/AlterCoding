@@ -1,7 +1,7 @@
 mono:
-  image: hackyourtraining
+  image: altercoding
   environment:
-   - VIRTUAL_HOST=www.hackyourtraining.com
+   - VIRTUAL_HOST=www.altercoding.com
   expose:
    - "80"
   dns:
