@@ -28,6 +28,13 @@ body {
     padding-top: 30px;
 }
 
+.ac-picture {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
 .ac-proposal-picture {
     text-align: center;
     margin-left: auto;
