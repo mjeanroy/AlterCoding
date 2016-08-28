@@ -28,6 +28,12 @@ body {
     padding-top: 30px;
 }
 
+.ac-subtitle {
+    font-size: 3rem;
+    padding-top: 30px;
+    padding-left: 50px;
+}
+
 .ac-picture {
     text-align: center;
     margin-left: auto;
