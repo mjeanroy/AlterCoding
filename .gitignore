@@ -2,6 +2,7 @@
 .paket/
 packages/
 .vs/
+.vscode/
 bin/
 obj/
 build/
